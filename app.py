@@ -1,5 +1,5 @@
 import streamlit as st
-from pages import 1_Add_Item, 2_In_Out, 3_View_Inventory, 4_Retrieve_Item, 5_Trends
+from pages import Add_Item, In_Out, ViewInventory, Retrieve_Item, Trends
 
 def main():
     st.title("Inventory Management System")
