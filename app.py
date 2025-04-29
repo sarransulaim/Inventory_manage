@@ -1,5 +1,5 @@
 import streamlit as st
-from pages import Add_Item, In_Out, ViewInventory, Retrieve_Item, Trends
+from pages import 1_Add_Item, 2_In_Out, 3_View_Inventory, 4_Retrieve_Item, 5_Trends
 
 def main():
     st.title("Inventory Management System")
@@ -8,16 +8,15 @@ def main():
     choice = st.sidebar.selectbox("Select Option", menu)
 
     if choice == "Add Item":
-        Add_Item.run()
+        1_Add_Item.run()
     elif choice == "In/Out Operations":
-        In_Out.run()
+        2_In_Out.run()
     elif choice == "View Inventory":
-        View_Inventory.run()
+        3_View_Inventory.run()
     elif choice == "Retrieve Item":
-        Retrieve_Item.run()
+        4_Retrieve_Item.run()
     elif choice == "Trends":
-        Trends.run()
+        5_Trends.run()
 
 if __name__ == "__main__":
     main()
-  
