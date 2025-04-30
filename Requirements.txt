@@ -1,7 +1,7 @@
 streamlit
-pandas
 sqlalchemy
+pandas
+numpy
 pyzbar
 opencv-python-headless
-av
-plotly
+streamlit-webrtc
