@@ -1,5 +1,5 @@
 from sqlalchemy.orm import sessionmaker
-from models import engine, Item, Department, StockHistory
+from models.database import engine, Item, Department, StockHistory
 
 Session = sessionmaker(bind=engine)
 session = Session()
