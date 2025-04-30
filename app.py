@@ -8,15 +8,15 @@ def main():
     choice = st.sidebar.selectbox("Select Option", menu)
 
     if choice == "Add Item":
-    add_item.run()
+       add_item.run()
     elif choice == "In/Out Operations":
-    in_out.run()
+       in_out.run()
     elif choice == "View Inventory":
-    view_inventory.run()
+       view_inventory.run()
     elif choice == "Retrieve Item":
-    retrieve_item.run()
+       retrieve_item.run()
     elif choice == "Trends":
-    trends.run()
+       trends.run()
 
 if __name__ == "__main__":
     main()
