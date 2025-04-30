@@ -5,3 +5,4 @@ numpy
 pyzbar
 opencv-python-headless
 streamlit-webrtc
+plotly
