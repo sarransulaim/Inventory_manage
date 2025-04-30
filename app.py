@@ -9,13 +9,13 @@ def main():
 
     if choice == "Add Item":
     add_item.run()
-elif choice == "In/Out Operations":
+    elif choice == "In/Out Operations":
     in_out.run()
-elif choice == "View Inventory":
+    elif choice == "View Inventory":
     view_inventory.run()
-elif choice == "Retrieve Item":
+    elif choice == "Retrieve Item":
     retrieve_item.run()
-elif choice == "Trends":
+    elif choice == "Trends":
     trends.run()
 
 if __name__ == "__main__":
