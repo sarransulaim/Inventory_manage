@@ -13,12 +13,12 @@ page = st.sidebar.radio("Go to", (
 ))
 
 if page == "Add Item":
-    add_item.render()
+    add_item.add_new_item()
 elif page == "IN / OUT":
-    in_out.render()
+    in_out.handle_in_out()
 elif page == "View Inventory":
-    view_inventory.render()
+    view_inventory.display_inventory()
 elif page == "Retrieve Item":
-    retrieve_item.render()
+    retrieve_item.retrieve_item_info()
 elif page == "Trends & Forecast":
-    trends.render()
+    trends.show_trends()
