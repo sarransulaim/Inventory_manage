@@ -1,13 +1,15 @@
 import streamlit as st
-import pandas as pd
-from models.db_utils import get_inventory
+from models.db_utils import get_items_by_name
 
-def run():
-    st.subheader("Current Inventory")
+def view_inventory_page():
+    st.title("View Inventory")
 
-    items = get_inventory()
-    data = [{"Item Name": item.name, "Quantity": item.quantity, "Low Stock Threshold": item.low_stock_threshold} for item in items]
-    df = pd.DataFrame(data)
+    item_name = st.text_input("Search Item")
+    items = get_items_by_name(item_name)
 
-    st.dataframe(df)
-  
+    if items:
+        st.write("Inventory Details:")
+        for item in items:
+            st.write(f"Name: {item.name}, Barcode: {item.barcode}, Quantity: {item.quantity}")
+    else:
+        st.warning("No items found!")
