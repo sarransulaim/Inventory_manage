@@ -22,7 +22,7 @@ def add_item(name, barcode, quantity, low_stock_threshold, department_id):
         return f"Error adding item: {e}"
 
 # Get items by name
-def get_item_by_name(name: str):
+def get_items_by_name(name: str):
     session = Session(bind=engine)
     item = session.query(Item).filter(Item.name.ilike(f"%{name}%")).all()
     session.close()
