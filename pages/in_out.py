@@ -5,7 +5,7 @@ def in_out_page():
     st.title("In/Out Operations")
 
     item_name = st.text_input("Search Item")
-    items = get_items_by_name(item_name)
+    items = get_item_by_name(item_name)
 
     if items:
         item_names = [item.name for item in items]
