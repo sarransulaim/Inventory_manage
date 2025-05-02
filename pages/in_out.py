@@ -1,5 +1,5 @@
 import streamlit as st
-from models.db_utils import get_items_by_name, record_stock_change
+from models.db_utils import get_item_by_name, record_stock_change
 
 def in_out_page():
     st.title("In/Out Operations")
