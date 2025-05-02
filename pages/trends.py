@@ -1,6 +1,6 @@
 import streamlit as st
 from models.db_utils import get_items_by_name
-from fbprophet import Prophet
+from prophet import Prophet
 import pandas as pd
 import numpy as np
 
