@@ -1,22 +1,24 @@
 import streamlit as st
 from pages import add_item, in_out, view_inventory, retrieve_item, trends
 
-def main():
-    st.title("Inventory Management System")
+st.set_page_config(page_title="Inventory Manager", layout="wide")
 
-    menu = ["Add Item", "In/Out Operations", "View Inventory", "Retrieve Item", "Trends"]
-    choice = st.sidebar.selectbox("Select Option", menu)
+st.sidebar.title("Navigation")
+page = st.sidebar.radio("Go to", (
+    "Add Item", 
+    "IN / OUT", 
+    "View Inventory", 
+    "Retrieve Item", 
+    "Trends & Forecast"
+))
 
-    if choice == "Add Item":
-       add_item.run()
-    elif choice == "In/Out Operations":
-       in_out.run()
-    elif choice == "View Inventory":
-       view_inventory.run()
-    elif choice == "Retrieve Item":
-       retrieve_item.run()
-    elif choice == "Trends":
-       trends.run()
-
-if __name__ == "__main__":
-    main()
+if page == "Add Item":
+    add_item.render()
+elif page == "IN / OUT":
+    in_out.render()
+elif page == "View Inventory":
+    view_inventory.render()
+elif page == "Retrieve Item":
+    retrieve_item.render()
+elif page == "Trends & Forecast":
+    trends.render()
